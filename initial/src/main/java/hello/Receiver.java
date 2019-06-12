@@ -15,7 +15,7 @@ public class Receiver {
 
     public void receiveMessage(String message) {
 
-        System.out.println("Recieved <" + message + ">");
+        System.out.println("Received <" + message + ">");
         latch.countDown();
     }
 

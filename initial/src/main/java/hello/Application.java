@@ -19,7 +19,13 @@ import org.springframework.context.annotation.Bean;
  * This application requires you to run RabbitMQ as Server
  *
  * In Terminal:
- * /usr/local/sbin/rabbitmq-server *
+ * /usr/local/sbin/rabbitmq-server
+ *
+ * This class demonstrates:
+ * - how a Queue is made
+ * - a topic is bound to a queue, ready to receive messages
+ * - a messageListener is added
+ * - a container is made for the listener, listening to a certain queue
  *
  */
 @SpringBootApplication
@@ -35,7 +41,7 @@ public class Application {
 
     @Bean
     TopicExchange exchange() {
-        return new TopicExchange((topicExchangeName));
+        return new TopicExchange(topicExchangeName);
     }
 
     @Bean
